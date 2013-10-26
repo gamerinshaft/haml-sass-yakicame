@@ -1,21 +1,87 @@
-%h1 Listing tweets
+#tweet_index
+  .row
+    .span8 
+      .tweet_box
+        %h3
+          投稿一覧
+        %hr
+        .tweet
+          %h3 
+            大畠健
+            %span.screen_name @ken 
+            %span.time 10分前
+          .comment  
+            %p いつ寝るの？今でしょー！
+          .favorite
+            %p
+              %a
+                %i.icon-star
+                お気に入りに登録  
+          .fav_list
+            .fav_number
+              .number{align: "center"}
+                %strong 4
+              .text
+                %p 件のお気に入り
 
-%table
-  %tr
-    %th User
-    %th Content
-    %th
-    %th
-    %th
+            .fav_pic
+        .tweet
+          %h3 
+            大畠健
+            %span.screen_name @ken 
+            %span.time 10分前
+          .comment  
+            %p いつ寝るの？今でしょー！
+          .favorite
+            %p
+              %a
+                %i.icon-pencil
+                編集
+              %a
+                %i.icon-trash
+                削除
+              %a
+                %i.icon-star
+                お気に入りに登録  
+          .fav_list
+            .fav_number
+              .number{align: "center"}
+                %strong 4
+              .text
+                %p 件のお気に入り
 
-  - @tweets.each do |tweet|
-    %tr
-      %td= tweet.user_id
-      %td= tweet.content
-      %td= link_to 'Show', tweet
-      %td= link_to 'Edit', edit_tweet_path(tweet)
-      %td= link_to 'Destroy', tweet, :method => :delete, :data => { :confirm => 'Are you sure?' }
+            .fav_pic
 
-%br
+      
+      %a.detail_tweet
+        もっとみる    
 
-= link_to 'New Tweet', new_tweet_path
+    .span4
+      .my_profile
+        .profile_box
+          %h3 @saiwki
+          %a プロフィールをみる
+          .profile_list
+            %a.list_num
+              %strong 43
+              %br
+              ツイート
+            %a.list_num
+              %strong 23
+              .text
+                お気に入り
+            %a.list_num
+              %strong 6
+              .text
+                フォロー
+            %a.list_num
+              %strong 7
+              .text
+                フォロワー
+          .clear      
+
+
+
+
+
+
